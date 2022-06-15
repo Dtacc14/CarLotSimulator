@@ -8,7 +8,7 @@ namespace CarLotSimulator
     {
         public Car()
         {
-
+            CarLot.numberOfCars++;
         }
         public int Year { get; set; }
         public string Make { get; set; }
@@ -35,6 +35,7 @@ namespace CarLotSimulator
             HonkNoise = HornSound;
             IsDriveable = CanDrive;
             Console.WriteLine($"The last type of car is a {Year} {Make} {Modle} that sounds like {EngineNoise} when you drive it, and sounds like {HonkNoise} when you honk it. I like this car: {IsDriveable}");
+            CarLot.numberOfCars++;
         }
 
     }
